@@ -483,7 +483,7 @@ export default function Home() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-red-600 mb-2">📍</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">地址</h3>
-                <p className="text-gray-600 text-sm">深圳市龙岗区龙岗街道</p>
+                <p className="text-gray-600 text-sm">深圳市龙岗区龙岗街道祥情世纪城市广场二楼</p>
               </div>
             </div>
           </div>
