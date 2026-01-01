@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, MapPin, Zap, Smartphone, Lightbulb, Globe, BarChart3, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useLocation } from "wouter";
 
 /**
  * Design Philosophy: Modern Tech Company
@@ -11,6 +12,7 @@ import { useState } from "react";
  */
 
 export default function Home() {
+  const [, navigate] = useLocation();
   const [activeTab, setActiveTab] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -62,30 +64,33 @@ export default function Home() {
   const products = [
     {
       id: 1,
-      name: "智慧学习手机",
-      description: "为学生设计的专业学习工具",
+      slug: "smart-phone",
       icon: "📱",
+      title: "智慧学习手机",
+      description: "为学生设计的专业学习工具",
     },
     {
       id: 2,
-      name: "智能学习平板",
-      description: "沉浸式学习体验",
+      slug: "smart-tablet",
       icon: "📲",
+      title: "智能学习平板",
+      description: "沉浸式学习体验",
     },
     {
       id: 3,
-      name: "智能手表",
+      slug: "smart-watch",
+      icon: "⏰",
+      title: "智能手表",
       description: "健康监测与学习助手",
-      icon: "⌚",
     },
     {
       id: 4,
-      name: "OLED护眼台灯",
+      slug: "oled-lamp",
+      icon: "💫",
+      title: "OLED护眼台灯",
       description: "第四代健康光源技术",
-      icon: "💡",
     },
   ];
-
   const solutions = [
     {
       id: 1,
@@ -279,16 +284,16 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {products.map((product) => (
-              <div
-                key={product.id}
-                className="group bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-xl transition cursor-pointer"
-              >
+              <div key={product.id} className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition">
                 <div className="text-4xl mb-4">{product.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{product.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{product.title}</h3>
                 <p className="text-gray-600 text-sm mb-4">{product.description}</p>
-                <div className="flex items-center text-red-600 font-semibold text-sm group-hover:gap-2 transition">
+                <button
+                  onClick={() => navigate(`/product/${product.slug}`)}
+                  className="inline-flex items-center text-red-600 font-semibold text-sm hover:gap-2 transition cursor-pointer"
+                >
                   了解详情 <ChevronRight className="w-4 h-4 ml-1" />
-                </div>
+                </button>
               </div>
             ))}
           </div>
