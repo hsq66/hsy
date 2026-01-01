@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, MapPin, Zap, Smartphone, Lightbulb, Globe, BarChart3, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
+import { updateSEOMeta, addStructuredData } from "@/lib/seo";
 
 /**
  * Design Philosophy: Modern Tech Company
@@ -18,6 +19,24 @@ export default function Home() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState("");
+
+  useEffect(() => {
+    updateSEOMeta({
+      title: "深圳市红盛源科技有限公司 - 智慧物联 健康光环境",
+      description: "深圳市红盛源科技有限公司致力于便捷通信、健康光环境的科技型创新公司。基于新型的OLED技术，研究与拓展塑造低碳、环保、节能的照明第四代新型科技应用产品。",
+      keywords: "智慧物联,健康光环境,OLED技术,智慧学习手机,智能平板,智能手表,护眼台灯",
+      ogTitle: "深圳市红盛源科技有限公司",
+      ogDescription: "智慧物联、健康光环境的科技型创新企业",
+      canonicalUrl: "https://hongshengyuan.tech",
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "产品中心",
+      "description": "红盛源科技的智慧产品系列",
+    });
+  }, []);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;

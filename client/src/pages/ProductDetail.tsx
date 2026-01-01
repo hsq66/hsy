@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Check, Smartphone, Lightbulb, Watch, Tablet } from "lucide-react";
 import { useLocation } from "wouter";
+import { useEffect } from "react";
+import { updateSEOMeta, addStructuredData, generateProductSchema } from "@/lib/seo";
 
 /**
  * Design Philosophy: Modern Tech Company
@@ -153,6 +155,25 @@ export default function ProductDetail() {
   const [location, navigate] = useLocation();
   const productId = location.split("/").pop();
   const product = productId ? productDetails[productId] : null;
+
+  useEffect(() => {
+    if (product) {
+      updateSEOMeta({
+        title: `${product.name} - 深圳市红盛源科技有限公司`,
+        description: product.description,
+        keywords: `${product.name},红盛源科技,智慧物联,OLED,健康光环境`,
+        ogTitle: product.name,
+        ogDescription: product.subtitle,
+        canonicalUrl: `https://hongshengyuan.tech/product/${productId}`,
+      });
+
+      addStructuredData(generateProductSchema({
+        name: product.name,
+        description: product.description,
+        image: product.image,
+      }));
+    }
+  }, [product, productId]);
 
   if (!product) {
     return (
