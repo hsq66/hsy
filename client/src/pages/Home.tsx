@@ -98,30 +98,32 @@ export default function Home() {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-gray-700 hover:text-red-600 transition font-medium">
+            <a href="#home" className="text-gray-700 hover:text-red-600 transition font-medium">
               首页
             </a>
-            <a href="#" className="text-gray-700 hover:text-red-600 transition font-medium">
+            <a href="#about" className="text-gray-700 hover:text-red-600 transition font-medium">
               关于我们
             </a>
-            <a href="#" className="text-gray-700 hover:text-red-600 transition font-medium">
+            <a href="#products" className="text-gray-700 hover:text-red-600 transition font-medium">
               产品中心
             </a>
-            <a href="#" className="text-gray-700 hover:text-red-600 transition font-medium">
+            <a href="#solutions" className="text-gray-700 hover:text-red-600 transition font-medium">
               解决方案
             </a>
-            <a href="#" className="text-gray-700 hover:text-red-600 transition font-medium">
+            <a href="#news" className="text-gray-700 hover:text-red-600 transition font-medium">
               新闻资讯
             </a>
-            <Button className="bg-red-600 hover:bg-red-700 text-white">
-              联系我们
-            </Button>
+            <a href="#contact" className="inline-block">
+              <Button className="bg-red-600 hover:bg-red-700 text-white">
+                联系我们
+              </Button>
+            </a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-red-50 py-20">
+      <section id="home" className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-red-50 py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -163,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="about" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">关于我们</h2>
@@ -191,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-white">
+      <section id="products" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block text-red-600 font-semibold text-sm mb-4">产品中心</span>
@@ -232,7 +234,7 @@ export default function Home() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="solutions" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block text-red-600 font-semibold text-sm mb-4">解决方案</span>
@@ -277,7 +279,7 @@ export default function Home() {
       </section>
 
       {/* News Section */}
-      <section className="py-20 bg-white">
+      <section id="news" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block text-red-600 font-semibold text-sm mb-4">新闻资讯</span>
@@ -314,7 +316,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-red-700">
+      <section id="contact" className="py-20 bg-gradient-to-r from-red-600 to-red-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">准备好开始了吗？</h2>
           <p className="text-red-100 text-lg mb-8 max-w-2xl mx-auto">
@@ -350,18 +352,18 @@ export default function Home() {
             <div>
               <h4 className="font-bold text-white mb-4">关于我们</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-red-400 transition">公司简介</a></li>
-                <li><a href="#" className="hover:text-red-400 transition">企业文化</a></li>
-                <li><a href="#" className="hover:text-red-400 transition">发展历程</a></li>
+                    <li><a href="#about" className="hover:text-red-400 transition">公司简介</a></li>
+                <li><a href="#about" className="hover:text-red-400 transition">企业文化</a></li>
+                <li><a href="#about" className="hover:text-red-400 transition">发展历程</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-white mb-4">产品与服务</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-red-400 transition">产品中心</a></li>
-                <li><a href="#" className="hover:text-red-400 transition">解决方案</a></li>
-                <li><a href="#" className="hover:text-red-400 transition">技术支持</a></li>
+                <li><a href="#products" className="hover:text-red-400 transition">产品中心</a></li>
+                <li><a href="#solutions" className="hover:text-red-400 transition">解决方案</a></li>
+                <li><a href="#solutions" className="hover:text-red-400 transition">技术支持</a></li>
               </ul>
             </div>
 
@@ -382,7 +384,7 @@ export default function Home() {
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="text-sm text-gray-400 hover:text-red-400 transition">隐私政策</a>
               <a href="#" className="text-sm text-gray-400 hover:text-red-400 transition">服务条款</a>
-              <a href="#" className="text-sm text-gray-400 hover:text-red-400 transition">联系我们</a>
+              <a href="#contact" className="text-sm text-gray-400 hover:text-red-400 transition">联系我们</a>
             </div>
           </div>
         </div>
