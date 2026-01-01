@@ -43,15 +43,15 @@
 }
 
 :root {
-  --primary: #DC143C;
+  --primary: #FFD700;
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: #B22222;
+  --sidebar-primary: #DAA520;
   --sidebar-primary-foreground: #FFFFFF;
-  --chart-1: #FF6B6B;
-  --chart-2: #DC143C;
-  --chart-3: #B22222;
-  --chart-4: #8B0000;
-  --chart-5: #660000;
+  --chart-1: #FFD700;
+  --chart-2: #DAA520;
+  --chart-3: #B8860B;
+  --chart-4: #8B4513;
+  --chart-5: #556B2F;
   --radius: 0.65rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.235 0.015 65);

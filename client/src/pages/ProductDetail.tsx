@@ -184,7 +184,7 @@ export default function ProductDetail() {
           <p className="text-gray-600 mb-8">抱歉，我们找不到您要查看的产品。</p>
           <Button
             onClick={() => navigate("/")}
-            className="bg-red-600 hover:bg-red-700 text-white"
+            className="bg-amber-500 hover:bg-amber-600 text-white"
           >
             返回首页
           </Button>
@@ -200,7 +200,7 @@ export default function ProductDetail() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <button
             onClick={() => navigate("/")}
-            className="flex items-center gap-2 text-gray-700 hover:text-red-600 transition font-medium"
+            className="flex items-center gap-2 text-gray-700 hover:text-amber-500 transition font-medium"
           >
             <ChevronLeft className="w-5 h-5" />
             返回
@@ -211,12 +211,12 @@ export default function ProductDetail() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 via-white to-red-50">
+      <section className="py-20 bg-gradient-to-br from-amber-50 via-white to-amber-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div>
-                <span className="inline-block text-red-600 font-semibold text-sm mb-4">
+                <span className="inline-block text-amber-500 font-semibold text-sm mb-4">
                   产品详情
                 </span>
                 <h1 className="text-5xl font-bold text-gray-900 mb-4">{product.name}</h1>
@@ -226,12 +226,12 @@ export default function ProductDetail() {
               <p className="text-lg text-gray-700 leading-relaxed">{product.description}</p>
 
               <div className="flex gap-4">
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg font-semibold rounded-lg">
+                <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg font-semibold rounded-lg">
                   立即购买
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-red-600 text-red-600 hover:bg-red-50 px-8 py-6 text-lg font-semibold rounded-lg"
+                  className="border-amber-500 text-amber-500 hover:bg-amber-50 px-8 py-6 text-lg font-semibold rounded-lg"
                 >
                   咨询详情
                 </Button>
@@ -257,7 +257,7 @@ export default function ProductDetail() {
             {product.features.map((feature, index) => (
               <div key={index} className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <Check className="w-6 h-6 text-red-600 mt-1" />
+                  <Check className="w-6 h-6 text-amber-500 mt-1" />
                 </div>
                 <div>
                   <p className="text-lg text-gray-700">{feature}</p>
@@ -303,14 +303,14 @@ export default function ProductDetail() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-red-700">
+      <section className="py-20 bg-gradient-to-r from-amber-500 to-amber-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">准备好体验了吗？</h2>
-          <p className="text-red-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-amber-100 text-lg mb-8 max-w-2xl mx-auto">
             联系我们的专业团队，了解更多产品信息和购买选项。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-red-600 hover:bg-red-50 px-8 py-6 text-lg font-semibold rounded-lg">
+            <Button className="bg-white text-amber-500 hover:bg-amber-50 px-8 py-6 text-lg font-semibold rounded-lg">
               立即购买
             </Button>
             <Button
@@ -340,17 +340,17 @@ export default function ProductDetail() {
               <h4 className="font-bold text-white mb-4">关于我们</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="/" className="hover:text-red-400 transition">
+                  <a href="/" className="hover:text-amber-300 transition">
                     公司简介
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="hover:text-red-400 transition">
+                  <a href="/" className="hover:text-amber-300 transition">
                     企业文化
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="hover:text-red-400 transition">
+                  <a href="/" className="hover:text-amber-300 transition">
                     发展历程
                   </a>
                 </li>
@@ -361,17 +361,17 @@ export default function ProductDetail() {
               <h4 className="font-bold text-white mb-4">产品与服务</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="/" className="hover:text-red-400 transition">
+                  <a href="/" className="hover:text-amber-300 transition">
                     产品中心
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="hover:text-red-400 transition">
+                  <a href="/" className="hover:text-amber-300 transition">
                     解决方案
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="hover:text-red-400 transition">
+                  <a href="/" className="hover:text-amber-300 transition">
                     技术支持
                   </a>
                 </li>
@@ -393,13 +393,13 @@ export default function ProductDetail() {
               © 2025 深圳市红盛源科技有限公司 · 版权所有
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="/" className="text-sm text-gray-400 hover:text-red-400 transition">
+              <a href="/" className="text-sm text-gray-400 hover:text-amber-300 transition">
                 隐私政策
               </a>
-              <a href="/" className="text-sm text-gray-400 hover:text-red-400 transition">
+              <a href="/" className="text-sm text-gray-400 hover:text-amber-300 transition">
                 服务条款
               </a>
-              <a href="/" className="text-sm text-gray-400 hover:text-red-400 transition">
+              <a href="/" className="text-sm text-gray-400 hover:text-amber-300 transition">
                 联系我们
               </a>
             </div>

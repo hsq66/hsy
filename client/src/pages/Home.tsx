@@ -124,25 +124,25 @@ export default function Home() {
       id: 1,
       title: "车辆定位等物联网",
       description: "打造创新的定位系统，实时监测车辆位置、路况以及交通状况",
-      icon: <MapPin className="w-12 h-12 text-red-600" />,
+      icon: <MapPin className="w-12 h-12 text-amber-500" />,
     },
     {
       id: 2,
       title: "中小企业ERP",
       description: "ERP解决方案、CRM解决方案、多系统集成方案、集团解决方案",
-      icon: <Globe className="w-12 h-12 text-red-600" />,
+      icon: <Globe className="w-12 h-12 text-amber-500" />,
     },
     {
       id: 3,
       title: "数字化咨询服务",
       description: "从发展战略、新型能力、系统性解决方案构建体系化关联",
-      icon: <BarChart3 className="w-12 h-12 text-red-600" />,
+      icon: <BarChart3 className="w-12 h-12 text-amber-500" />,
     },
     {
       id: 4,
       title: "新材料与新技术应用",
       description: "OLED第四代光源技术，高纯石英砂，高纯稀有金属应用",
-      icon: <Zap className="w-12 h-12 text-red-600" />,
+      icon: <Zap className="w-12 h-12 text-amber-500" />,
     },
   ];
 
@@ -182,13 +182,13 @@ export default function Home() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-gray-700 hover:text-red-600 transition font-medium"
+                className="text-gray-700 hover:text-amber-500 transition font-medium"
               >
                 {link.label}
               </a>
             ))}
             <a href="#contact" className="inline-block">
-              <Button className="bg-red-600 hover:bg-red-700 text-white">
+              <Button className="bg-amber-500 hover:bg-amber-600 text-white">
                 联系我们
               </Button>
             </a>
@@ -216,14 +216,14 @@ export default function Home() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-gray-700 hover:text-red-600 transition font-medium py-2"
+                  className="text-gray-700 hover:text-amber-500 transition font-medium py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
               <a href="#contact" className="inline-block" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
+                <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white">
                   联系我们
                 </Button>
               </a>
@@ -233,18 +233,18 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-red-50 py-20">
+      <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-white to-amber-50 py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div>
-                <span className="inline-block text-red-600 font-semibold text-sm mb-4">
+                <span className="inline-block text-amber-500 font-semibold text-sm mb-4">
                   科技创新 · 健康生活
                 </span>
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
                   智慧物联
                   <br />
-                  <span className="text-red-600">健康光环境</span>
+                  <span className="text-amber-500">健康光环境</span>
                 </h1>
               </div>
 
@@ -253,10 +253,10 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2">
+                <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2">
                   了解更多 <ChevronRight className="w-5 h-5" />
                 </Button>
-                <Button variant="outline" className="px-8 py-6 text-lg border-red-600 text-red-600 hover:bg-red-50 rounded-lg">
+                <Button variant="outline" className="px-8 py-6 text-lg border-amber-500 text-amber-500 hover:bg-amber-50 rounded-lg">
                   产品展示
                 </Button>
               </div>
@@ -268,7 +268,7 @@ export default function Home() {
                 alt="Hero Banner"
                 className="w-full h-full object-cover rounded-2xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-red-600/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-amber-500/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>
@@ -291,8 +291,8 @@ export default function Home() {
               { title: "生态融合", desc: "与全球合作伙伴共同构建智慧生态" },
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                  <Lightbulb className="w-6 h-6 text-red-600" />
+                <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                  <Lightbulb className="w-6 h-6 text-amber-500" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
@@ -306,7 +306,7 @@ export default function Home() {
       <section id="products" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-block text-red-600 font-semibold text-sm mb-4">产品中心</span>
+            <span className="inline-block text-amber-500 font-semibold text-sm mb-4">产品中心</span>
             <h2 className="text-4xl font-bold text-gray-900">智慧产品系列</h2>
           </div>
 
@@ -318,7 +318,7 @@ export default function Home() {
                 <p className="text-gray-600 text-sm mb-4">{product.description}</p>
                 <button
                   onClick={() => navigate(`/product/${product.slug}`)}
-                  className="inline-flex items-center text-red-600 font-semibold text-sm hover:gap-2 transition cursor-pointer"
+                  className="inline-flex items-center text-amber-500 font-semibold text-sm hover:gap-2 transition cursor-pointer"
                 >
                   了解详情 <ChevronRight className="w-4 h-4 ml-1" />
                 </button>
@@ -326,7 +326,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-12 text-center">
+          <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-2xl p-12 text-center">
             <img
               src={import.meta.env.BASE_URL + "images/products-showcase.jpg"}
               alt="Products Showcase"
@@ -336,7 +336,7 @@ export default function Home() {
             <p className="text-gray-700 max-w-2xl mx-auto mb-6">
               我们的产品系列覆盖智慧学习、健康监测、环保照明等多个领域，为用户提供一站式的智慧生活解决方案。
             </p>
-            <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3">
+            <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3">
               浏览全部产品
             </Button>
           </div>
@@ -347,7 +347,7 @@ export default function Home() {
       <section id="solutions" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-block text-red-600 font-semibold text-sm mb-4">解决方案</span>
+            <span className="inline-block text-amber-500 font-semibold text-sm mb-4">解决方案</span>
             <h2 className="text-4xl font-bold text-gray-900">行业解决方案</h2>
           </div>
 
@@ -355,7 +355,7 @@ export default function Home() {
             {solutions.map((solution) => (
               <div
                 key={solution.id}
-                className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition border-l-4 border-red-600"
+                className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition border-l-4 border-amber-500"
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="flex-shrink-0">{solution.icon}</div>
@@ -364,24 +364,24 @@ export default function Home() {
                     <p className="text-gray-600">{solution.description}</p>
                   </div>
                 </div>
-                <a href="#" className="inline-flex items-center text-red-600 font-semibold hover:gap-2 transition">
+                <a href="#" className="inline-flex items-center text-amber-500 font-semibold hover:gap-2 transition">
                   了解更多 <ChevronRight className="w-4 h-4 ml-1" />
                 </a>
               </div>
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-12 text-white text-center">
+          <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-12 text-white text-center">
             <img
               src={import.meta.env.BASE_URL + "images/solutions-bg.jpg"}
               alt="Solutions Background"
               className="w-full h-80 object-cover rounded-xl mb-8"
             />
             <h3 className="text-3xl font-bold mb-4">数字化转型伙伴</h3>
-            <p className="text-red-100 max-w-2xl mx-auto mb-6">
+            <p className="text-amber-100 max-w-2xl mx-auto mb-6">
               我们提供从战略规划到实施落地的完整数字化转型服务，帮助企业在新时代实现业务创新和价值提升。
             </p>
-            <Button className="bg-white text-red-600 hover:bg-red-50 px-8 py-3 font-semibold">
+            <Button className="bg-white text-amber-500 hover:bg-amber-50 px-8 py-3 font-semibold">
               咨询专家
             </Button>
           </div>
@@ -392,7 +392,7 @@ export default function Home() {
       <section id="news" className="py-20 bg-white hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-block text-red-600 font-semibold text-sm mb-4">新闻资讯</span>
+            <span className="inline-block text-amber-500 font-semibold text-sm mb-4">新闻资讯</span>
             <h2 className="text-4xl font-bold text-gray-900">最新动态</h2>
           </div>
 
@@ -402,20 +402,20 @@ export default function Home() {
                 key={item.id}
                 className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition cursor-pointer group"
               >
-                <div className="bg-gradient-to-r from-red-600 to-red-700 h-32 flex items-center justify-center">
+                <div className="bg-gradient-to-r from-amber-500 to-amber-600 h-32 flex items-center justify-center">
                   <span className="text-white text-4xl">📰</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-semibold text-red-600 bg-red-100 px-3 py-1 rounded-full">
+                    <span className="text-xs font-semibold text-amber-500 bg-amber-100 px-3 py-1 rounded-full">
                       {item.category}
                     </span>
                     <span className="text-xs text-gray-500">{item.date}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-red-600 transition line-clamp-2">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-amber-500 transition line-clamp-2">
                     {item.title}
                   </h3>
-                  <a href="#" className="inline-flex items-center text-red-600 font-semibold text-sm hover:gap-2 transition">
+                  <a href="#" className="inline-flex items-center text-amber-500 font-semibold text-sm hover:gap-2 transition">
                     阅读全文 <ChevronRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
@@ -444,8 +444,8 @@ export default function Home() {
               )}
 
               {formError && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                  <p className="text-red-700 font-medium">{formError}</p>
+                <div className="mb-6 p-4 bg-amber-50 border border-red-200 rounded-lg">
+                  <p className="text-amber-600 font-medium">{formError}</p>
                 </div>
               )}
 
@@ -460,7 +460,7 @@ export default function Home() {
                   value={formData.name}
                   onChange={handleFormChange}
                   placeholder="请输入您的姓名"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
                 />
               </div>
 
@@ -475,7 +475,7 @@ export default function Home() {
                   value={formData.email}
                   onChange={handleFormChange}
                   placeholder="请输入您的邮箱地址"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition"
                 />
               </div>
 
@@ -490,13 +490,13 @@ export default function Home() {
                   onChange={handleFormChange}
                   placeholder="请输入您的留言或问题..."
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition resize-none"
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition"
+                className="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 rounded-lg transition"
               >
                 发送消息
               </Button>
@@ -504,17 +504,17 @@ export default function Home() {
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-600 mb-2">☎</div>
+                <div className="text-3xl font-bold text-amber-500 mb-2">☎</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">电话</h3>
                 <p className="text-gray-600">18923719468</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-600 mb-2">@</div>
+                <div className="text-3xl font-bold text-amber-500 mb-2">@</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">邮箱</h3>
                 <p className="text-gray-600">info@hongshengyuan.tech</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-600 mb-2">📍</div>
+                <div className="text-3xl font-bold text-amber-500 mb-2">📍</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">地址</h3>
                 <p className="text-gray-600 text-sm">深圳市龙岗区龙岗街道祥情世纪城市广场二楼</p>
               </div>
@@ -524,15 +524,15 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-red-700">
+      <section className="py-20 bg-gradient-to-r from-amber-500 to-amber-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">准备好开始了吗？</h2>
-          <p className="text-red-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-amber-100 text-lg mb-8 max-w-2xl mx-auto">
             联系我们的专业团队，了解如何通过我们的产品和解决方案为您的业务创造价值。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#contact" className="inline-block">
-              <Button className="bg-white text-red-600 hover:bg-red-50 px-8 py-6 text-lg font-semibold rounded-lg">
+              <Button className="bg-white text-amber-500 hover:bg-amber-50 px-8 py-6 text-lg font-semibold rounded-lg">
                 立即咨询
               </Button>
             </a>
@@ -562,18 +562,18 @@ export default function Home() {
             <div>
               <h4 className="font-bold text-white mb-4">关于我们</h4>
               <ul className="space-y-2 text-sm">
-                    <li><a href="#about" className="hover:text-red-400 transition">公司简介</a></li>
-                <li><a href="#about" className="hover:text-red-400 transition">企业文化</a></li>
-                <li><a href="#about" className="hover:text-red-400 transition">发展历程</a></li>
+                    <li><a href="#about" className="hover:text-amber-300 transition">公司简介</a></li>
+                <li><a href="#about" className="hover:text-amber-300 transition">企业文化</a></li>
+                <li><a href="#about" className="hover:text-amber-300 transition">发展历程</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-white mb-4">产品与服务</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#products" className="hover:text-red-400 transition">产品中心</a></li>
-                <li><a href="#solutions" className="hover:text-red-400 transition">解决方案</a></li>
-                <li><a href="#solutions" className="hover:text-red-400 transition">技术支持</a></li>
+                <li><a href="#products" className="hover:text-amber-300 transition">产品中心</a></li>
+                <li><a href="#solutions" className="hover:text-amber-300 transition">解决方案</a></li>
+                <li><a href="#solutions" className="hover:text-amber-300 transition">技术支持</a></li>
               </ul>
             </div>
 
@@ -592,9 +592,9 @@ export default function Home() {
               © 2026 深圳市红盛源科技有限公司 · 版权所有
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="text-sm text-gray-400 hover:text-red-400 transition">隐私政策</a>
-              <a href="#" className="text-sm text-gray-400 hover:text-red-400 transition">服务条款</a>
-              <a href="#contact" className="text-sm text-gray-400 hover:text-red-400 transition">联系我们</a>
+              <a href="#" className="text-sm text-gray-400 hover:text-amber-300 transition">隐私政策</a>
+              <a href="#" className="text-sm text-gray-400 hover:text-amber-300 transition">服务条款</a>
+              <a href="#contact" className="text-sm text-gray-400 hover:text-amber-300 transition">联系我们</a>
             </div>
           </div>
         </div>
