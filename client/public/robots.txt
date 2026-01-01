@@ -1,0 +1,46 @@
+# robots.txt for hongshengyuan.tech
+# This file tells search engines how to crawl and index the website
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.pdf$
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Baidu (for Chinese search engine optimization)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://hongshengyuan.tech/sitemap.xml
+
+# Cache settings
+# Cache-Control: max-age=86400
+
+# Crawl delay for all other bots
+Crawl-delay: 1
+Request-rate: 1/1s
