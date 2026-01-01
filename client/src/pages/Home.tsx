@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChevronRight, MapPin, Zap, Smartphone, Lightbulb, Globe, BarChart3 } from "lucide-react";
+import { ChevronRight, MapPin, Zap, Smartphone, Lightbulb, Globe, BarChart3, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 /**
@@ -12,6 +12,15 @@ import { useState } from "react";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { label: "首页", href: "#home" },
+    { label: "关于我们", href: "#about" },
+    { label: "产品中心", href: "#products" },
+    { label: "解决方案", href: "#solutions" },
+    { label: "新闻资讯", href: "#news" },
+  ];
 
   const products = [
     {
@@ -97,29 +106,60 @@ export default function Home() {
             <img src="/images/logo.png" alt="红盛源科技 Logo" className="h-12 w-auto" />
           </div>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#home" className="text-gray-700 hover:text-red-600 transition font-medium">
-              首页
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-red-600 transition font-medium">
-              关于我们
-            </a>
-            <a href="#products" className="text-gray-700 hover:text-red-600 transition font-medium">
-              产品中心
-            </a>
-            <a href="#solutions" className="text-gray-700 hover:text-red-600 transition font-medium">
-              解决方案
-            </a>
-            <a href="#news" className="text-gray-700 hover:text-red-600 transition font-medium">
-              新闻资讯
-            </a>
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-gray-700 hover:text-red-600 transition font-medium"
+              >
+                {link.label}
+              </a>
+            ))}
             <a href="#contact" className="inline-block">
               <Button className="bg-red-600 hover:bg-red-700 text-white">
                 联系我们
               </Button>
             </a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6 text-gray-900" />
+            ) : (
+              <Menu className="w-6 h-6 text-gray-900" />
+            )}
+          </button>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200">
+            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-gray-700 hover:text-red-600 transition font-medium py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a href="#contact" className="inline-block" onClick={() => setMobileMenuOpen(false)}>
+                <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
+                  联系我们
+                </Button>
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
