@@ -43,12 +43,12 @@
 }
 
 :root {
-  --primary: #FFD700;
+  --primary: #D4AF37; /* Metallic Gold */
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: #DAA520;
+  --sidebar-primary: #B8860B; /* Dark Goldenrod */
   --sidebar-primary-foreground: #FFFFFF;
-  --chart-1: #FFD700;
-  --chart-2: #DAA520;
+  --chart-1: #F5E6AB; /* Champagne */
+  --chart-2: #D4AF37;
   --chart-3: #B8860B;
   --chart-4: #8B4513;
   --chart-5: #556B2F;

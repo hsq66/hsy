@@ -55,7 +55,7 @@ const productDetails: Record<
       "考试准备",
       "知识竞赛参与",
     ],
-    image: import.meta.env.BASE_URL + "images/products-showcase.jpg",
+    image: import.meta.env.BASE_URL + "images/products-showcase.webp",
   },
   "smart-tablet": {
     name: "智能学习平板",
@@ -86,7 +86,7 @@ const productDetails: Record<
       "视频制作",
       "数据分析",
     ],
-    image: import.meta.env.BASE_URL + "images/products-showcase.jpg",
+    image: import.meta.env.BASE_URL + "images/products-showcase.webp",
   },
   "smart-watch": {
     name: "智能手表",
@@ -117,7 +117,7 @@ const productDetails: Record<
       "消息通知",
       "支付功能",
     ],
-    image: import.meta.env.BASE_URL + "images/products-showcase.jpg",
+    image: import.meta.env.BASE_URL + "images/products-showcase.webp",
   },
   "oled-lamp": {
     name: "OLED护眼台灯",
@@ -148,7 +148,7 @@ const productDetails: Record<
       "创意设计",
       "夜间工作",
     ],
-    image: import.meta.env.BASE_URL + "images/products-showcase.jpg",
+    image: import.meta.env.BASE_URL + "images/products-showcase.webp",
   },
 };
 

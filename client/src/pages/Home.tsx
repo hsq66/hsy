@@ -244,7 +244,7 @@ export default function Home() {
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
                   智慧物联
                   <br />
-                  <span className="text-amber-500">健康光环境</span>
+                  <span className="bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent">健康光环境</span>
                 </h1>
               </div>
 
@@ -264,9 +264,9 @@ export default function Home() {
 
             <div className="relative h-96 lg:h-full">
               <img
-                src={import.meta.env.BASE_URL + "images/hero-banner.jpg"}
+                src={import.meta.env.BASE_URL + "images/hero-banner.webp"}
                 alt="Hero Banner"
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                className="w-full h-full object-cover rounded-3xl shadow-[0_20px_50px_rgba(212,175,55,0.3)] border border-amber-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-amber-500/20 to-transparent rounded-2xl"></div>
             </div>
@@ -290,7 +290,7 @@ export default function Home() {
               { title: "品质保证", desc: "严格的质量管理体系和完善的售后服务" },
               { title: "生态融合", desc: "与全球合作伙伴共同构建智慧生态" },
             ].map((item, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition">
+              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100">
                 <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
                   <Lightbulb className="w-6 h-6 text-amber-500" />
                 </div>
@@ -328,7 +328,7 @@ export default function Home() {
 
           <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-2xl p-12 text-center">
             <img
-              src={import.meta.env.BASE_URL + "images/products-showcase.jpg"}
+              src={import.meta.env.BASE_URL + "images/products-showcase.webp"}
               alt="Products Showcase"
               className="w-full h-80 object-cover rounded-xl mb-8"
             />
@@ -373,7 +373,7 @@ export default function Home() {
 
           <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-12 text-white text-center">
             <img
-              src={import.meta.env.BASE_URL + "images/solutions-bg.jpg"}
+              src={import.meta.env.BASE_URL + "images/solutions-bg.webp"}
               alt="Solutions Background"
               className="w-full h-80 object-cover rounded-xl mb-8"
             />
