@@ -77,7 +77,6 @@ export default function Home() {
     { label: "关于我们", href: "#about" },
     { label: "产品中心", href: "#products" },
     { label: "解决方案", href: "#solutions" },
-    { label: "新闻资讯", href: "#news" },
   ];
 
   const products = [
