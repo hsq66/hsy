@@ -3,6 +3,7 @@ import { ChevronLeft, Check, Smartphone, Lightbulb, Watch, Tablet } from "lucide
 import { useLocation } from "wouter";
 import { useEffect } from "react";
 import { updateSEOMeta, addStructuredData, generateProductSchema } from "@/lib/seo";
+import Breadcrumb from "@/components/Breadcrumb";
 
 /**
  * Design Philosophy: Modern Tech Company
