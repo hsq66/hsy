@@ -163,7 +163,7 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/images/logo.png" alt="红盛源科技 Logo" className="h-12 w-auto" />
+            <img src="/hsy/images/logo.png" alt="红盛源科技 Logo" className="h-12 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
@@ -254,7 +254,7 @@ export default function Home() {
 
             <div className="relative h-96 lg:h-full">
               <img
-                src="/images/hero-banner.jpg"
+                src="/hsy/images/hero-banner.jpg"
                 alt="Hero Banner"
                 className="w-full h-full object-cover rounded-2xl shadow-2xl"
               />
@@ -318,7 +318,7 @@ export default function Home() {
 
           <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-12 text-center">
             <img
-              src="/images/products-showcase.jpg"
+              src="/hsy/images/products-showcase.jpg"
               alt="Products Showcase"
               className="w-full h-80 object-cover rounded-xl mb-8"
             />
@@ -363,7 +363,7 @@ export default function Home() {
 
           <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-12 text-white text-center">
             <img
-              src="/images/solutions-bg.jpg"
+              src="/hsy/images/solutions-bg.jpg"
               alt="Solutions Background"
               className="w-full h-80 object-cover rounded-xl mb-8"
             />
@@ -542,7 +542,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="/images/logo.png" alt="红盛源科技 Logo" className="h-10 w-auto" />
+                <img src="/hsy/images/logo.png" alt="红盛源科技 Logo" className="h-10 w-auto" />
               </div>
               <p className="text-sm text-gray-400">
                 致力于智慧物联、健康生活的科技型创新公司

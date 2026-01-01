@@ -55,7 +55,7 @@ const productDetails: Record<
       "考试准备",
       "知识竞赛参与",
     ],
-    image: "/images/products-showcase.jpg",
+    image: "/hsy/images/products-showcase.jpg",
   },
   "smart-tablet": {
     name: "智能学习平板",
@@ -86,7 +86,7 @@ const productDetails: Record<
       "视频制作",
       "数据分析",
     ],
-    image: "/images/products-showcase.jpg",
+    image: "/hsy/images/products-showcase.jpg",
   },
   "smart-watch": {
     name: "智能手表",
@@ -117,7 +117,7 @@ const productDetails: Record<
       "消息通知",
       "支付功能",
     ],
-    image: "/images/products-showcase.jpg",
+    image: "/hsy/images/products-showcase.jpg",
   },
   "oled-lamp": {
     name: "OLED护眼台灯",
@@ -148,7 +148,7 @@ const productDetails: Record<
       "创意设计",
       "夜间工作",
     ],
-    image: "/images/products-showcase.jpg",
+    image: "/hsy/images/products-showcase.jpg",
   },
 };
 
@@ -205,7 +205,7 @@ export default function ProductDetail() {
             <ChevronLeft className="w-5 h-5" />
             返回
           </button>
-          <img src="/images/logo.png" alt="红盛源科技 Logo" className="h-12 w-auto" />
+          <img src="/hsy/images/logo.png" alt="红盛源科技 Logo" className="h-12 w-auto" />
           <div className="w-20"></div>
         </div>
       </nav>
@@ -329,7 +329,7 @@ export default function ProductDetail() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="/images/logo.png" alt="红盛源科技 Logo" className="h-10 w-auto" />
+                <img src="/hsy/images/logo.png" alt="红盛源科技 Logo" className="h-10 w-auto" />
               </div>
               <p className="text-sm text-gray-400">
                 致力于智慧物联、健康生活的科技型创新公司
