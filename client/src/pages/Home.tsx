@@ -436,7 +436,7 @@ export default function Home() {
               </p>
             </div>
 
-            <form onSubmit={handleFormSubmit} className="bg-gray-50 rounded-xl p-8 shadow-sm">
+            <form action="https://formspree.io/f/xdakkdwl" method="POST" className="bg-gray-50 rounded-xl p-8 shadow-sm">
               {formSubmitted && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                   <p className="text-green-700 font-medium">感谢您的留言！我们会尽快与您联系。</p>
