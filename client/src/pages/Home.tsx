@@ -253,12 +253,16 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2">
-                  了解更多 <ChevronRight className="w-5 h-5" />
-                </Button>
-                <Button variant="outline" className="px-8 py-6 text-lg border-amber-500 text-amber-500 hover:bg-amber-50 rounded-lg">
-                  产品展示
-                </Button>
+                <a href="#solutions">
+                  <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2 w-full sm:w-auto">
+                    了解更多 <ChevronRight className="w-5 h-5" />
+                  </Button>
+                </a>
+                <a href="#products">
+                  <Button variant="outline" className="px-8 py-6 text-lg border-amber-500 text-amber-500 hover:bg-amber-50 rounded-lg w-full sm:w-auto">
+                    产品展示
+                  </Button>
+                </a>
               </div>
             </div>
 
