@@ -94,10 +94,7 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">红</span>
-            </div>
-            <span className="font-bold text-xl text-gray-900">红盛源科技</span>
+            <img src="/images/logo.png" alt="红盛源科技 Logo" className="h-12 w-auto" />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -343,10 +340,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">红</span>
-                </div>
-                <span className="font-bold text-white">红盛源科技</span>
+                <img src="/images/logo.png" alt="红盛源科技 Logo" className="h-10 w-auto" />
               </div>
               <p className="text-sm text-gray-400">
                 致力于智慧物联、健康生活的科技型创新公司
