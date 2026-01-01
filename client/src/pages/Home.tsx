@@ -13,6 +13,43 @@ import { useState } from "react";
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formError, setFormError] = useState("");
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormError("");
+  };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Validation
+    if (!formData.name.trim()) {
+      setFormError("请输入您的姓名");
+      return;
+    }
+    if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setFormError("请输入有效的邮箱地址");
+      return;
+    }
+    if (!formData.message.trim()) {
+      setFormError("请输入您的留言");
+      return;
+    }
+
+    // Simulate form submission
+    console.log("表单数据:", formData);
+    setFormSubmitted(true);
+    setFormData({ name: "", email: "", message: "" });
+
+    // Reset success message after 3 seconds
+    setTimeout(() => {
+      setFormSubmitted(false);
+    }, 3000);
+  };
 
   const navLinks = [
     { label: "首页", href: "#home" },
@@ -355,17 +392,117 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact Form Section */}
+      <section id="contact" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">联系我们</h2>
+              <p className="text-lg text-gray-600">
+                有任何问题或建议？我们很乐意为您服务。
+              </p>
+            </div>
+
+            <form onSubmit={handleFormSubmit} className="bg-gray-50 rounded-xl p-8 shadow-sm">
+              {formSubmitted && (
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <p className="text-green-700 font-medium">感谢您的留言！我们会尽快与您联系。</p>
+                </div>
+              )}
+
+              {formError && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-700 font-medium">{formError}</p>
+                </div>
+              )}
+
+              <div className="mb-6">
+                <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
+                  姓名 *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  placeholder="请输入您的姓名"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition"
+                />
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
+                  邮箱 *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  placeholder="请输入您的邮箱地址"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition"
+                />
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
+                  留言 *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleFormChange}
+                  placeholder="请输入您的留言或问题..."
+                  rows={5}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition resize-none"
+                />
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition"
+              >
+                发送消息
+              </Button>
+            </form>
+
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-red-600 mb-2">☎</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">电话</h3>
+                <p className="text-gray-600">18923719468</p>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-red-600 mb-2">@</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">邮箱</h3>
+                <p className="text-gray-600">info@hongshengyuan.tech</p>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-red-600 mb-2">📍</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">地址</h3>
+                <p className="text-gray-600 text-sm">深圳市龙岗区龙岗街道</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section id="contact" className="py-20 bg-gradient-to-r from-red-600 to-red-700">
+      <section className="py-20 bg-gradient-to-r from-red-600 to-red-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">准备好开始了吗？</h2>
           <p className="text-red-100 text-lg mb-8 max-w-2xl mx-auto">
             联系我们的专业团队，了解如何通过我们的产品和解决方案为您的业务创造价值。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-red-600 hover:bg-red-50 px-8 py-6 text-lg font-semibold rounded-lg">
-              立即咨询
-            </Button>
+            <a href="#contact" className="inline-block">
+              <Button className="bg-white text-red-600 hover:bg-red-50 px-8 py-6 text-lg font-semibold rounded-lg">
+                立即咨询
+              </Button>
+            </a>
             <Button
               variant="outline"
               className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-lg"
