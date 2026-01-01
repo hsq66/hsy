@@ -44,6 +44,22 @@ export default function Home() {
     setFormError("");
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // 导航栏高度偏移
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -253,16 +269,19 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#solutions">
-                  <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2 w-full sm:w-auto">
-                    了解更多 <ChevronRight className="w-5 h-5" />
-                  </Button>
-                </a>
-                <a href="#products">
-                  <Button variant="outline" className="px-8 py-6 text-lg border-amber-500 text-amber-500 hover:bg-amber-50 rounded-lg w-full sm:w-auto">
-                    产品展示
-                  </Button>
-                </a>
+                <Button 
+                  onClick={() => scrollToSection('solutions')}
+                  className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2 w-full sm:w-auto"
+                >
+                  了解更多 <ChevronRight className="w-5 h-5" />
+                </Button>
+                <Button 
+                  variant="outline" 
+                  onClick={() => scrollToSection('products')}
+                  className="px-8 py-6 text-lg border-amber-500 text-amber-500 hover:bg-amber-50 rounded-lg w-full sm:w-auto"
+                >
+                  产品展示
+                </Button>
               </div>
             </div>
 
