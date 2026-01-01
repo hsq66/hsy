@@ -379,8 +379,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* News Section */}
-      <section id="news" className="py-20 bg-white">
+      {/* News Section - Hidden */}
+      <section id="news" className="py-20 bg-white hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block text-red-600 font-semibold text-sm mb-4">新闻资讯</span>
