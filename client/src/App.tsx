@@ -10,12 +10,11 @@ import ProductDetail from "./pages/ProductDetail";
 
 function Router() {
   return (
-    <WouterRouter base="/hsy">
+    <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
       <Switch>
-        <Route path={"/"} component={Home} />
+        <Route path="/" component={Home} />
         <Route path="/product/:id" component={ProductDetail} />
-        <Route path={"/404"} component={NotFound} />
-        {/* Final fallback route */}
+        <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
     </WouterRouter>
