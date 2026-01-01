@@ -44,7 +44,7 @@ export default function Home() {
     setFormError("");
   };
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Validation
@@ -61,15 +61,25 @@ export default function Home() {
       return;
     }
 
-    // Simulate form submission
-    console.log("表单数据:", formData);
-    setFormSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Reset success message after 3 seconds
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 3000);
+      if (response.ok) {
+        setFormSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setFormSubmitted(false), 5000);
+      } else {
+        setFormError("提交失败，请稍后再试或直接拨打电话联系我们。");
+      }
+    } catch (error) {
+      setFormError("网络错误，请检查您的网络连接。");
+    }
   };
 
   const navLinks = [
