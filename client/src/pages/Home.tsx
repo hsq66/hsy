@@ -359,7 +359,10 @@ export default function Home() {
             <p className="text-gray-700 max-w-2xl mx-auto mb-6">
               我们的产品系列覆盖智慧学习、健康监测、环保照明等多个领域，为用户提供一站式的智慧生活解决方案。
             </p>
-            <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3">
+            <Button 
+              onClick={() => scrollToSection('products')}
+              className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3"
+            >
               浏览全部产品
             </Button>
           </div>
@@ -387,9 +390,12 @@ export default function Home() {
                     <p className="text-gray-600">{solution.description}</p>
                   </div>
                 </div>
-                <a href="#" className="inline-flex items-center text-amber-500 font-semibold hover:gap-2 transition">
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="inline-flex items-center text-amber-500 font-semibold hover:gap-2 transition cursor-pointer"
+                >
                   了解更多 <ChevronRight className="w-4 h-4 ml-1" />
-                </a>
+                </button>
               </div>
             ))}
           </div>
@@ -404,7 +410,10 @@ export default function Home() {
             <p className="text-amber-100 max-w-2xl mx-auto mb-6">
               我们提供从战略规划到实施落地的完整数字化转型服务，帮助企业在新时代实现业务创新和价值提升。
             </p>
-            <Button className="bg-white text-amber-500 hover:bg-amber-50 px-8 py-3 font-semibold">
+            <Button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-white text-amber-500 hover:bg-amber-50 px-8 py-3 font-semibold"
+            >
               咨询专家
             </Button>
           </div>
@@ -561,6 +570,7 @@ export default function Home() {
             </a>
             <Button
               variant="outline"
+              onClick={() => scrollToSection('about')}
               className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-lg"
             >
               了解更多
