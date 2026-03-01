@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-    var proxy = "SOCKS5 127.0.0.1:1080; DIRECT";
+    var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT";
     var direct = "DIRECT";
 
     // 判断是否为 IP 地址的简单函数
