@@ -13,6 +13,8 @@ function FindProxyForURL(url, host) {
             isInNet(host, "10.0.0.0", "255.0.0.0") ||
             isInNet(host, "172.16.0.0", "255.240.0.0") ||
             isInNet(host, "192.168.0.0", "255.255.0.0") ||
+            isInNet(host, "202.105.190.2", "255.255.255.0") ||
+            isInNet(host, "103.101.204.53", "255.255.255.0") ||
             isInNet(host, "127.0.0.0", "255.0.0.0")
         ))
     ) {
@@ -42,7 +44,7 @@ function FindProxyForURL(url, host) {
         "zhihu.com", "*.zhihu.com", "zhimg.com", "*.zhimg.com",
         "bilibili.com", "*.bilibili.com", "hdslb.com", "*.hdslb.com",
         "meituan.com", "*.meituan.com", "dpfile.com", "*.dpfile.com",
-        "amap.com", "*.amap.com", "autonavi.com", "*.autonavi.com","*.long.kim","202.105.190.2","154.12.18.74","103.101.204.53"
+        "amap.com", "*.amap.com", "autonavi.com", "*.autonavi.com","*.long.kim"
     ];
     for (var i = 0; i < chinaSites.length; i++) {
         if (shExpMatch(host, chinaSites[i])) {
