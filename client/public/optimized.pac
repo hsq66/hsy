@@ -42,7 +42,7 @@ function FindProxyForURL(url, host) {
         "zhihu.com", "*.zhihu.com", "zhimg.com", "*.zhimg.com",
         "bilibili.com", "*.bilibili.com", "hdslb.com", "*.hdslb.com",
         "meituan.com", "*.meituan.com", "dpfile.com", "*.dpfile.com",
-        "amap.com", "*.amap.com", "autonavi.com", "*.autonavi.com"
+        "amap.com", "*.amap.com", "autonavi.com", "*.autonavi.com","*.long.kim","202.105.190.2","154.12.18.74","103.101.204.53"
     ];
     for (var i = 0; i < chinaSites.length; i++) {
         if (shExpMatch(host, chinaSites[i])) {
