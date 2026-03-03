@@ -10,12 +10,15 @@ function FindProxyForURL(url, host) {
         isPlainHostName(host) ||
         shExpMatch(host, "*.local") ||
         (isIPAddress(host) && (
+            isInNet(host, "127.0.0.0", "255.0.0.0") ||
             isInNet(host, "10.0.0.0", "255.0.0.0") ||
+            isInNet(host, "10.135.0.0", "255.255.0.0") ||        // 新增 10.135.*
             isInNet(host, "172.16.0.0", "255.240.0.0") ||
-            isInNet(host, "192.168.0.0", "255.255.0.0") ||
-            isInNet(host, "202.105.190.2", "255.255.255.0") ||
-            isInNet(host, "103.101.204.53", "255.255.255.0") ||
-            isInNet(host, "127.0.0.0", "255.0.0.0")
+            isInNet(host, "192.168.0.0", "255.255.0.0") ||       // 包含 192.168.* 及 192.168.0.117
+            isInNet(host, "169.254.0.0", "255.255.0.0") ||       // 新增 169.254/16
+            isInNet(host, "202.105.190.2", "255.255.255.255") || // 精确匹配 202.105.190.2
+            isInNet(host, "154.12.18.74", "255.255.255.255") ||  // 新增 154.12.18.74
+            isInNet(host, "103.101.204.53", "255.255.255.0")
         ))
     ) {
         return direct;
@@ -32,7 +35,7 @@ function FindProxyForURL(url, host) {
         return direct;
     }
 
-    // 常见中国站点
+    // 常见中国站点及新增站点
     var chinaSites = [
         "baidu.com", "*.baidu.com", "bdstatic.com", "*.bdstatic.com",
         "taobao.com", "*.taobao.com", "alicdn.com", "*.alicdn.com", "alibaba.com", "*.alibaba.com",
@@ -44,7 +47,8 @@ function FindProxyForURL(url, host) {
         "zhihu.com", "*.zhihu.com", "zhimg.com", "*.zhimg.com",
         "bilibili.com", "*.bilibili.com", "hdslb.com", "*.hdslb.com",
         "meituan.com", "*.meituan.com", "dpfile.com", "*.dpfile.com",
-        "amap.com", "*.amap.com", "autonavi.com", "*.autonavi.com","*.long.kim"
+        "amap.com", "*.amap.com", "autonavi.com", "*.autonavi.com",
+        "*.long.kim", "as.long.kim" // 新增域名匹配
     ];
     for (var i = 0; i < chinaSites.length; i++) {
         if (shExpMatch(host, chinaSites[i])) {
